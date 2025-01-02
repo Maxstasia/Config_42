@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+body {font-family: 'Fira Code', monospace; background-color: #0d1117; color: #c9d1d9;}
+button, .card.shadow.m-2.pl-fix.card-size.grow, .sm-t.case, .btn, input[type="submit"] {background: linear-gradient(45deg, #ff00cc, #3333ff); color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; font-weight: bold; text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7); box-shadow: 0px 0px 20px rgba(255, 0, 204, 0.7), 0px 0px 40px rgba(51, 51, 255, 0.7); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;}
+button:hover, .card.shadow.m-2.pl-fix.card-size.grow:hover, .sm-t.case:hover, .btn:hover, input[type="submit"]:hover {transform: scale(1.1); box-shadow: 0px 0px 30px rgba(255, 0, 204, 0.9), 0px 0px 60px rgba(51, 51, 255, 0.9);}
+input[type="text"], input[type="search"], textarea {background: #161b22; border: 2px solid #3333ff; color: #ffffff; padding: 10px; font-family: 'Fira Code', monospace; border-radius: 5px; outline: none; transition: border 0.3s;}
+input[type="text"]:focus, input[type="search"]:focus, textarea:focus {border-color: #ff00cc;}
+.navbar, .list-group-item {background: #0d1117; order: 2px solid #3333ff; box-shadow: 0px 0px 10px rgba(51, 51, 255, 0.5); border-radius: 8px;}
+.navbar-brand, .nav-link, .list-group-item {color: #ffffff !important;}
+.navbar-brand:hover, .nav-link:hover {color: #ff00cc !important;}
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-thumb {background: linear-gradient(45deg, #ff00cc, #3333ff); border-radius: 6px; box-shadow: 0px 0px 10px rgba(255, 0, 204, 0.8);}
+::-webkit-scrollbar-thumb:hover {background: linear-gradient(45deg, #ff00cc, #7700ff);}
+@keyframes glitch {0% { text-shadow: 2px 2px #ff00cc, -2px -2px #3333ff; } 50% { text-shadow: -2px -2px #ff00cc, 2px 2px #3333ff; } 100% { text-shadow: 2px 2px #ff00cc, -2px -2px #3333ff; }}
+h1, h2, h3, h4, .navbar-brand.me-2.position-relative {color: #ffffff; text-shadow: 2px 2px #ff00cc; animation: glitch 1.5s infinite alternate;}
+footer {border-top: 2px solid #3333ff; padding: 10px; text-align: center; color: #ffffff;}
+.sm-t.case.pooled {background: linear-gradient(45deg, #ff5500, #ff8800); box-shadow: 0px 0px 10px rgba(255, 153, 102, 0.5), 0px 0px 20px rgba(255, 204, 0, 0.5);}
+.sm-t.case.friend {background: linear-gradient(45deg, #33ff99, #00cc66); box-shadow: 0px 0px 10px rgba(51, 255, 153, 0.5), 0px 0px 20px rgba(0, 204, 102, 0.5);}
+.sm-t.case.close_friend {background: linear-gradient(45deg, #ff0000, #ff3377); box-shadow: 0px 0px 10px rgba(255, 51, 102, 0.5), 0px 0px 20px rgba(255, 0, 51, 0.5);}
+.sm-t.case.focus {animation: rainbow 5s infinite alternate;}
+@keyframes rainbow { 0% {background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9900cc);} 20% {background: linear-gradient(45deg, #ff9900, #33cc33, #3399ff, #9900cc, #ff0000);} 40% {background: linear-gradient(45deg, #33cc33, #3399ff, #9900cc, #ff0000, #ff9900);} 60% {background: linear-gradient(45deg, #3399ff, #9900cc, #ff0000, #ff9900, #33cc33);} 80% {background: linear-gradient(45deg, #9900cc, #ff0000, #ff9900, #33cc33, #3399ff);} 100% {background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9900cc);}}
+.sm-t.case img.profile-pic2 {border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); margin-top: 5px; width: 50px; height: 50px;}
+td.small-colors {background: linear-gradient(135deg, #1a1a1a 25%, #333333 25%, #333333 50%, #1a1a1a 50%, #1a1a1a 75%, #333333 75%, #333333 100%); background-size: 20px 20px; border: 1px solid #555555; box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(50, 50, 50, 0.4); width: 30px; height: 30px; transition: transform 0.3s, box-shadow 0.3s;} td.small-colors:hover { transform: scale(1.1); box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.2), 0px 0px 15px rgba(150, 150, 150, 0.6); cursor: pointer;} @keyframes pulse { 0% {box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(50, 50, 50, 0.4);} 50% {box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(80, 80, 80, 0.5);} 100% {box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(50, 50, 50, 0.4);}}
+td.small-colors {animation: pulse 3s infinite alternate;}
