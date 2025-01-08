@@ -13,7 +13,7 @@
 #    By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/15 14:42:22 by mstasiak          #+#    #+#              #
-#    Updated: 2024/01/02 19:02:15 by mstasiak         ###   ########.fr        #
+#    Updated: 2025/01/08 15:14:59 by mstasiak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,10 +47,18 @@ function ccc() {
         fi
     fi
 }
- 
-function norme(){
-	watch norminette -R CheckForbiddenSourceHearder
+
+function norme() {
+    # Vérifier si la commande norminette est installée
+    if ! command -v norminette &>/dev/null; then
+        echo "Erreur : La commande 'norminette' n'est pas installée ou introuvable." >&2
+        return 1
+    fi
+
+    # Exécuter norminette sur tous les arguments passés
+    watch norminette -R CheckForbiddenSourceHeader "$@"
 }
+
 
 alias death="exec sgoinfre/Death-Note.sh"
 alias Gambling="exec sgoinfre/Gamblings-School.sh"
