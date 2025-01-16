@@ -1,57 +1,69 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Refresh_Agenda_42.gs                               :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 15:15:12 by mstasiak          #+#    #+#             */
-/*   Updated: 2025/01/13 16:29:04 by mstasiak         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Refresh_Agenda_42.gs                               :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/13 15:15:12 by mstasiak          #+#    #+#              #
+#    Updated: 2025/01/16 12:20:48 by mstasiak         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 // Fonction qui synchronise l'agenda iCal avec Google Calendar
 function syncICalToGoogleCalendar() {
 	var iCalUrl = 'ton url iCal'; // Remplace 'ton url iCal' par l'URL de ton agenda iCal
-	var calendarId = 'ton agenda ID'; // Remplace 'ton agenda ID' par l'ID de ton agenda ou par 'primary' pour mettre ton agenda personnel.
+	var calendarId = 'ton agenda ID'; // Remplace 'ton agenda ID' par l'ID de ton agenda ou 'primary' pour ton agenda principal.
 
-	var response = UrlFetchApp.fetch(iCalUrl);  // Récupère le contenu de l'URL iCal
-	var eventsData = response.getContentText(); // Récupère le texte brut de l'agenda iCal
+	try {
+		var response = UrlFetchApp.fetch(iCalUrl); // Récupère le contenu de l'URL iCal
+		var eventsData = response.getContentText(); // Récupère le texte brut de l'agenda iCal
 
-	// Parse l'agenda iCal et extrait les événements
-	var icalEvents = parseICal(eventsData); 
+		// Parse l'agenda iCal et extrait les événements
+		var icalEvents = parseICal(eventsData);
 
-	// Récupère ton Google Calendar
-	var calendar = CalendarApp.getCalendarById(calendarId);
+		// Récupère ton Google Calendar
+		var calendar = CalendarApp.getCalendarById(calendarId);
 
-	// Récupère tous les événements existants dans Google Calendar
-	var existingEvents = calendar.getEvents(new Date(), new Date(new Date().getFullYear() + 1, 0, 1));
+		// Récupère tous les événements existants dans Google Calendar sur une période étendue
+		var existingEvents = calendar.getEvents(
+			new Date(new Date().getFullYear() - 1, 0, 1), // Depuis début de l'année précédente
+			new Date(new Date().getFullYear() + 1, 0, 1)  // Jusqu'à la fin de l'année suivante
+		);
 
-	// Supprime les événements de Google Calendar qui ne sont pas dans iCal
-	existingEvents.forEach(function(event) {
-		var match = icalEvents.find(function(icalEvent) {
-			return (
-				event.getTitle() === icalEvent.title &&
-				event.getStartTime().getTime() === icalEvent.start.getTime() &&
-				event.getEndTime().getTime() === icalEvent.end.getTime() &&
-				event.getDescription() === icalEvent.description &&
-				event.getLocation() === icalEvent.location
-			);
-		});
-		if (!match) {
-			event.deleteEvent(); // Supprime l'événement s'il n'existe plus dans l'iCal
-		}
-	});
-
-	// Ajoute ou met à jour les événements dans Google Calendar
-	icalEvents.forEach(function(icalEvent) {
-		if (!isEventDuplicate(calendar, icalEvent)) {
-			calendar.createEvent(icalEvent.title, icalEvent.start, icalEvent.end, {
-				description: icalEvent.description,
-				location: icalEvent.location
+		// Supprime les événements de Google Calendar qui ne sont pas dans iCal
+		existingEvents.forEach(function(event) {
+			var match = icalEvents.find(function(icalEvent) {
+				return (
+					event.getTitle() === icalEvent.title &&
+					event.getStartTime().getTime() === icalEvent.start.getTime() &&
+					event.getEndTime().getTime() === icalEvent.end.getTime() &&
+					event.getDescription() === icalEvent.description &&
+					event.getLocation() === icalEvent.location
+				);
 			});
-		}
-	});
+			if (!match) {
+				try {
+					event.deleteEvent(); // Supprime l'événement s'il n'existe plus dans l'iCal
+				} catch (error) {
+					console.error("Erreur lors de la suppression d'un événement :", error);
+				}
+			}
+		});
+
+		// Ajoute ou met à jour les événements dans Google Calendar
+		icalEvents.forEach(function(icalEvent) {
+			if (!isEventDuplicate(calendar, icalEvent)) {
+				calendar.createEvent(icalEvent.title, icalEvent.start, icalEvent.end, {
+					description: icalEvent.description,
+					location: icalEvent.location
+				});
+			}
+		});
+
+	} catch (error) {
+		console.error("Erreur lors de la synchronisation :", error);
+	}
 }
 
 // Fonction pour vérifier si un événement existe déjà
