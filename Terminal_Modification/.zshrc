@@ -18,12 +18,13 @@
 # **************************************************************************** #
 
 export ZSH="$HOME/.oh-my-zsh"
-
 ZSH_THEME="jonathan"
-
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 
 # Alias :
 function ccc() {
@@ -60,8 +61,9 @@ function norme() {
 }
 
 
-alias death="exec sgoinfre/Death-Note.sh"
-alias Gambling="exec sgoinfre/Gamblings-School.sh"
+alias death=/mnt/nfs/homes/mstasiak/sgoinfre/lock/Death-Note.sh
+alias Gambling=/mnt/nfs/homes/mstasiak/sgoinfre/lock/Gamblings-School.sh
 
 alias francinette=/mnt/nfs/homes/mstasiak/francinette/tester.sh
 alias paco=/mnt/nfs/homes/mstasiak/francinette/tester.sh
+export PATH=/home/mstasiak/.local/funcheck/host:$PATH
