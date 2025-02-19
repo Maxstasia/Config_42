@@ -1,0 +1,1 @@
+../../texmf/doc/fonts/tex-gyre/qag-hist.txt

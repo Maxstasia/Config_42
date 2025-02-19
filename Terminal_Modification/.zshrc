@@ -13,7 +13,7 @@
 #    By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/15 14:42:22 by mstasiak          #+#    #+#              #
-#    Updated: 2025/01/08 15:14:59 by mstasiak         ###   ########.fr        #
+#    Updated: 2025/02/19 12:52:29 by mstasiak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,9 +61,9 @@ function norme() {
 }
 
 
-alias death=/mnt/nfs/homes/mstasiak/sgoinfre/lock/Death-Note.sh
-alias Gambling=/mnt/nfs/homes/mstasiak/sgoinfre/lock/Gamblings-School.sh
+alias death=/home/$(whoami)/sgoinfre/lock/Death-Note.sh
+alias Gambling=/home/$(whoami)/sgoinfre/lock/Gamblings-School.sh
 
-alias francinette=/mnt/nfs/homes/mstasiak/francinette/tester.sh
-alias paco=/mnt/nfs/homes/mstasiak/francinette/tester.sh
-export PATH=/home/mstasiak/.local/funcheck/host:$PATH
+alias francinette=/home/$(whoami)/francinette/tester.sh
+alias paco=/home/$(whoami)/francinette/tester.sh
+export PATH=/home/$(whoami)/.local/funcheck/host:$PATH

@@ -1,0 +1,71 @@
+This package was debianized by:
+
+    Bart Martens <bartm@debian.org> on Sat, 18 Apr 2009 00:06:55 +0200
+
+It was downloaded from:
+
+    http://www.pberndt.com/Programme/Linux/pqiv/
+    https://github.com/phillipberndt/pqiv/releases
+
+Upstream author:
+
+    Phillip Berndt (mail at pberndt dot com)
+
+Copyright and license:
+
+ * Copyright (c) 2013-2017, Phillip Berndt
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+On Debian systems, the complete text of the GNU General Public License
+version 3 can be found in `/usr/share/common-licenses/GPL-3'.
+
+The Debian packaging is:
+
+    Copyright (C) 2009-2016 Bart Martens <bartm@knars.be>
+	Copyright (C) 2017 Phillip Berndt <mail@pberndt.com>
+
+and is licensed under the GPL version 3, see above.
+
+The files lib/strnatcmp.c and lib/strnatcmp.h were downloaded from
+
+    http://sourcefrog.net/projects/natsort/strnatcmp.c
+    http://sourcefrog.net/projects/natsort/strnatcmp.h
+
+and have this copyright and license information:
+
+    Copyright (C) 2000, 2004 by Martin Pool <mbp sourcefrog net>
+
+    This software is provided 'as-is', without any express or implied
+    warranty.  In no event will the authors be held liable for any damages
+    arising from the use of this software.
+
+    Permission is granted to anyone to use this software for any purpose,
+    including commercial applications, and to alter it and redistribute it
+    freely, subject to the following restrictions:
+
+    1. The origin of this software must not be misrepresented; you must not
+       claim that you wrote the original software. If you use this software
+       in a product, an acknowledgment in the product documentation would be
+       appreciated but is not required.
+    2. Altered source versions must be plainly marked as such, and must not be
+       misrepresented as being the original software.
+    3. This notice may not be removed or altered from any source distribution.
+
+The file debian/pqiv.mime was copied from the Debian package "qiv".
+This file is
+
+    Copyright (C) 1998-1999, 2001 Mitch Blevins <mblevin@debian.org>
+    Copyright (C) 2003-2004 Martin Pitt <mpitt@debian.org>
+
+and is licensed under the GPL version 2, see /usr/share/common-licenses/GPL-2.
+

@@ -1,0 +1,15 @@
+image/gif; pqiv -tfi %s; description="GIF Image"; test=test "$DISPLAY"; nametemplate=%s.gif; priority=4
+image/jpeg; pqiv -tfi %s; description="JPEG Image"; test=test "$DISPLAY"; nametemplate=%s.jpeg; priority=4
+image/pjpeg; pqiv -tfi %s; description="JPEG Image"; test=test "$DISPLAY"; nametemplate=%s.jpeg; priority=4
+image/tiff; pqiv -tfi %s; description="TIFF Image"; test=test "$DISPLAY"; nametemplate=%s.tiff; priority=4
+image/x-portable-bitmap; pqiv -tfi %s; description="PBM Image"; test=test "$DISPLAY"; nametemplate=%s.pbm; priority=4
+image/x-portable-graymap; pqiv -tfi %s; description="PGM Image"; test=test "$DISPLAY";nametemplate=%s.pgm; priority=4
+image/x-portable-pixmap; pqiv -tfi %s; description="PPM Image"; test=test "$DISPLAY"; nametemplate=%s.ppm; priority=4
+image/x-xbitmap; pqiv -tfi %s; description="XBM Image"; test=test "$DISPLAY"; nametemplate=%s.xbm; priority=4
+image/x-xpixmap; pqiv -tfi %s; description="XPM Image"; test=test "$DISPLAY"; nametemplate=%s.xpm; priority=4
+image/bmp; pqiv -tfi %s; description="BMP Image"; test=test "$DISPLAY"; nametemplate=%s.bmp; priority=4
+image/x-bmp; pqiv -tfi %s; description="BMP Image"; test=test "$DISPLAY"; nametemplate=%s.bmp; priority=4
+image/x-ms-bmp; pqiv -tfi %s; description="BMP Image"; test=test "$DISPLAY"; nametemplate=%s.bmp; priority=4
+image/targa; pqiv -tfi %s; description="TARGA Image"; test=test "$DISPLAY"; nametemplate=%s.tga; priority=4
+image/png; pqiv -tfi %s; description="PNG Image"; test=test "$DISPLAY"; nametemplate=%s.png; priority=4
+image/pm; pqiv -tfi %s; description="PM Image"; test=test "$DISPLAY"; nametemplate=%s.pm; priority=4

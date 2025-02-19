@@ -1,0 +1,3 @@
+[submodule "pimp_my_lock"]
+  	path = Lock/Code/pimp_my_lock
+  	url = https://github.com/jerem-ma/pimp_my_lock.git

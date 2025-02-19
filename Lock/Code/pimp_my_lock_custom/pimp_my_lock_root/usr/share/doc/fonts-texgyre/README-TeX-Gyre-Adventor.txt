@@ -1,0 +1,1 @@
+../../texmf/doc/fonts/tex-gyre/README-TeX-Gyre-Adventor.txt

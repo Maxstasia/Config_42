@@ -1,0 +1,12 @@
+{
+    "name": "xscreensaver lock button",
+    "description": "launch xscreensaver lock screen",
+    "uuid": "lockscreen@pimpmylock.sh",
+    "shell-version": [
+	"40",
+	"41",
+	"42"
+    ],
+    "gettext-domain": "lockscreen",
+    "version": 1
+}

@@ -1,0 +1,1 @@
+../../texmf/doc/fonts/tex-gyre-math/README-TeX-Gyre-DejaVu-Math.txt
