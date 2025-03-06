@@ -60,6 +60,15 @@ function norme() {
     watch norminette -R CheckForbiddenSourceHeader "$@"
 }
 
+all_git_pull() {
+    local workspace="$HOME/workspace"  # Remplace by your workspace path
+    for dir in "$workspace"/*; do
+        if [ -d "$dir/.git" ]; then
+            echo "🔄 Pulling in $dir..."
+            (cd "$dir" && git pull)
+        fi
+    done
+}
 
 alias death=/home/$(whoami)/sgoinfre/lock/Death-Note.sh
 alias Gambling=/home/$(whoami)/sgoinfre/lock/Gamblings-School.sh
