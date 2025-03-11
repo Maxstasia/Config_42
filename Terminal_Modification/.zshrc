@@ -61,13 +61,31 @@ function norme() {
 }
 
 all_git_pull() {
-    local workspace="$HOME/workspace"  # Remplace by your workspace path
+    local workspace="$HOME/worspace"  # Remplace par ton chemin de travail
     for dir in "$workspace"/*; do
         if [ -d "$dir/.git" ]; then
             echo "🔄 Pulling in $dir..."
             (cd "$dir" && git pull)
         fi
     done
+}
+
+all_git_status() {
+    local workspace="$HOME/workspace"  # Remplace par ton chemin de travail
+    for dir in "$workspace"/*; do
+        if [ -d "$dir/.git" ]; then
+            echo "🔄 status in $dir..."
+            (cd "$dir" && git status)
+        fi
+    done
+}
+
+
+
+function screen_saver() {
+    cd /home/$(whoami)/sgoinfre/lock/screen_saver
+    make
+    cd
 }
 
 alias death=/home/$(whoami)/sgoinfre/lock/Death-Note.sh
