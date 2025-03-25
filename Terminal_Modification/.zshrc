@@ -13,7 +13,7 @@
 #    By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/15 14:42:22 by mstasiak          #+#    #+#              #
-#    Updated: 2025/02/19 12:52:29 by mstasiak         ###   ########.fr        #
+#    Updated: 2025/03/25 15:22:45 by mstasiak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ function norme() {
 }
 
 all_git_pull() {
-    local workspace="$HOME/worspace"  # Remplace par ton chemin de travail
+    local workspace="$HOME/42"  # Remplace par ton chemin de travail
     for dir in "$workspace"/*; do
         if [ -d "$dir/.git" ]; then
             echo "🔄 Pulling in $dir..."
@@ -71,7 +71,7 @@ all_git_pull() {
 }
 
 all_git_status() {
-    local workspace="$HOME/workspace"  # Remplace par ton chemin de travail
+    local workspace="$HOME/42"  # Remplace par ton chemin de travail
     for dir in "$workspace"/*; do
         if [ -d "$dir/.git" ]; then
             echo "🔄 status in $dir..."
@@ -90,6 +90,8 @@ function screen_saver() {
 
 alias death=/home/$(whoami)/sgoinfre/lock/Death-Note.sh
 alias Gambling=/home/$(whoami)/sgoinfre/lock/Gamblings-School.sh
+
+alias hellgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --leak-resolution=high --trace-children=yes"
 
 alias francinette=/home/$(whoami)/francinette/tester.sh
 alias paco=/home/$(whoami)/francinette/tester.sh
