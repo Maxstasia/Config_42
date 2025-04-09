@@ -91,7 +91,7 @@ function screen_saver() {
 alias death=/home/$(whoami)/sgoinfre/lock/Death-Note.sh
 alias Gambling=/home/$(whoami)/sgoinfre/lock/Gamblings-School.sh
 
-alias hellgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --leak-resolution=high --trace-children=yes"
+alias hellgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --leak-resolution=high --trace-children=yes --tool=helgrind"
 
 alias francinette=/home/$(whoami)/francinette/tester.sh
 alias paco=/home/$(whoami)/francinette/tester.sh
