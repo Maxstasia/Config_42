@@ -89,4 +89,4 @@ xdotool key Return
 sleep 0.5
 
 # Lancer le script de log
-./lock.sh
+./lock_V2.sh
