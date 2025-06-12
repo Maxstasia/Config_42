@@ -28,7 +28,7 @@ eval "$(pyenv virtualenv-init -)"
 
 export PATH=/home/$(whoami)/.local/funcheck/host:$PATH
 
-#----------------------------------------ALIAS----------------------------------------#
+#---------------------------------------ALIAS---------------------------------------#
 #----------------------------------------ccc----------------------------------------#
 #   - Crée un alias pour la commande cc                                             #
 #   - Vérifie si le fichier source est fourni                                       #
@@ -291,11 +291,11 @@ alias helgrind='valgrind --tool=helgrind \
 #   - Utilise le fichier de log pour enregistrer les résultats de l'analyse         #
 #   - Utilise le mode de traçage des enfants pour suivre les processus enfants      #
 #   - Utilise le mode de débogage complet pour obtenir des informations détaillées  #
-#   - Utilise le fichier de sortie de drdgrind pour enregistrer les résultats        #
+#   - Utilise le fichier de sortie de drdgrind pour enregistrer les résultats       #
 #   - Utilise le fichier de suppression par défaut de Valgrind                      #
 #   - Affiche les résultats de l'analyse dans le fichier de log                     #
 #   - Affiche les informations de débogage dans le fichier de log                   #
-#   - Affiche les informations de drdgrind dans le fichier de log                    #
+#   - Affiche les informations de drdgrind dans le fichier de log                   #
 #   - Affiche les informations de simulation de mémoire dans le fichier de log      #
 #   - Affiche les informations de simulation de pile dans le fichier de log         #
 #   - Affiche les informations de simulation de performance dans le fichier de log  #
@@ -329,3 +329,8 @@ alias francinette=/home/$(whoami)/francinette/tester.sh
 #   - Alias pour utiliser la francinette sous le nom paco                           #
 #----------------------------------------paco---------------------------------------#
 alias paco=/home/$(whoami)/francinette/tester.sh
+
+#------------------------------------reset_chrome-----------------------------------#
+#   - Alias pour forcer la fermeture de google chrome                               #
+#------------------------------------reset_chrome-----------------------------------#
+alias reset_chrome='rm -rf ~/.config/google-chrome/Singleton*'
