@@ -18,6 +18,10 @@
 " **************************************************************************** "
 
 
+" Change l'adresse e-mail et l'identifiant dans le header de vim "
+let g:user42 = "mstasiak"
+let g:mail42 = "mstasiak@student.42.fr"
+
 " Affiche partiellement les commandes que vous tapez dans la dernière ligne de l'écran. "  
 set showcmd
 

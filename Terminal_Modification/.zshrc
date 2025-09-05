@@ -1,15 +1,15 @@
 # **************************************************************************** #
 #                                                                              #
-#                   ███████╗███████╗██╗  ██╗██████╗  ██████╗                   #
-#                   ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝                   #
-#                     ███╔╝ ███████╗███████║██████╔╝██║                        #
-#                    ███╔╝  ╚════██║██╔══██║██╔══██╗██║                        #
-#                   ███████╗███████║██║  ██║██║  ██║╚██████╗                   #
-#                   ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝                   #
-#                                                                              #
 #                                                         :::      ::::::::    #
 #    .zshrc                                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
+#    By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: Invalid date        by ═╝  ╚═╝╚═╝        #+#    #+#              #
+#    Updated: 2025/06/18 14:53:25 by mstasiak         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #    By: mstasiak <mstasiak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/15 14:42:22 by mstasiak          #+#    #+#              #
@@ -278,8 +278,6 @@ alias helgrind='valgrind --tool=helgrind \
     --conflict-cache-size=10000000 \
     --num-callers=20 \
     --gen-suppressions=all \
-    --suppressions=/usr/lib/valgrind/default.supp \
-    --log-file=helgrind_%p.log \
     --trace-children=yes \
     --vgdb=full'
 
@@ -318,7 +316,20 @@ alias drdgrind='valgrind --tool=drd \
     --trace-children=yes \
     --vgdb=full'
 
-
+#------------------------------------segfaultgrind------------------------------------#
+#   - Utilise Valgrind pour vérifier les erreurs de segmentation                      #
+#   - Utilise le mode de simulation de mémoire pour check les erreurs de segmentation #
+#   - Utilise le mode de simulation de pile pour check les erreurs de segmentation    #
+#   - Utilise le nombre d'appels de 20 pour afficher les appels de fonction           #
+#   - Utilise le fichier de log pour enregistrer les résultats de l'analyse           #
+#   - Utilise le mode de traçage des enfants pour suivre les processus enfants        #
+#   - Utilise le mode de débogage complet pour obtenir des informations détaillées    #
+#   - Utilise le fichier de sortie de segfaultgrind pour enregistrer les résultats    #
+#   - Utilise le fichier de suppression par défaut de Valgrind                        #
+#------------------------------------segfaultgrind------------------------------------#
+alias segfaultgrind='valgrind --tool=memcheck \
+	--leak-check=full \
+	--track-origins=yes'
 
 #------------------------------------francinette------------------------------------#
 #   - Alias pour utiliser la francinette                                            #
@@ -333,4 +344,4 @@ alias paco=/home/$(whoami)/francinette/tester.sh
 #------------------------------------reset_chrome-----------------------------------#
 #   - Alias pour forcer la fermeture de google chrome                               #
 #------------------------------------reset_chrome-----------------------------------#
-alias reset_chrome='rm -rf ~/.config/google-chrome/Singleton*'
+alias reset_chrome='rm -rf ~/.config/google-chrome/Singleton* && rm -rf ~/.config/google-chrome'
