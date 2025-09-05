@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your media file
-MEDIA_FILE="/home/$(whoami)/Pictures/Wallpapers/Maxwell-Cat.gif"
+MEDIA_FILE="../../Wallpapers/Maxwell-Cat.gif"
 
 # Determine file extension (lowercase for consistency)
 EXT=$(echo "${MEDIA_FILE##*.}" | tr '[:upper:]' '[:lower:]')

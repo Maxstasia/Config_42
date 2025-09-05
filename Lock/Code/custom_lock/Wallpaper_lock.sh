@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your media file
-MEDIA_FILE="/home/$(whoami)/Pictures/Wallpapers/Glamblings-School.mp4"
+MEDIA_FILE="../../Wallpapers/wallpaper.png"
 
 # Determine file extension (lowercase for consistency)
 EXT=$(echo "${MEDIA_FILE##*.}" | tr '[:upper:]' '[:lower:]')
