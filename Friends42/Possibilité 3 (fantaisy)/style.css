@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+body {background: linear-gradient(to bottom, #1a1a1a, #2e2e2e);color: #d4c7a0;font-family: 'Lora', serif;background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');background-attachment: fixed;}
+h1, h2, h3, h4, .name.display-5.fw-bold, .navbar-brand.me-2.position-relative {font-family: 'Cinzel', serif;color: #e8b923;text-shadow: 0 0 8px rgba(232, 185, 35, 0.6);}
+button, .btn, input, textarea, a, .card, .navbar-brand, .nav-link, .list-group-item, [class*="sm-t"], td {background: #2b1e12;color: #d4c7a0;border: 2px solid #e8b923;border-radius: 5px;transition: all 0.3s ease;box-shadow: inset 0 0 5px rgba(232, 185, 35, 0.3);}
+button:hover, .btn:hover, input[type="submit"]:hover, input[type="text"]:focus, input[type="search"]:focus, textarea:focus,
+.navbar-brand:hover, .nav-link:hover, .card.shadow.m-2.pl-fix.card-size.grow:hover {background: #3d2a1a;box-shadow: 0 0 15px rgba(232, 185, 35, 0.8);transform: scale(1.05);}
+button::after, .btn::after, input[type="submit"]::after {color: #e8b923;margin-left: 5px;opacity: 0;transition: opacity 0.3s ease;}
+button:hover::after, .btn:hover::after, input[type="submit"]:hover::after {opacity: 1;}
+.card.shadow.m-2.pl-fix.card-size.grow {background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');border: 3px solid #4a3723;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);}
+.navbar {background: #1a120b;border-bottom: 3px solid #e8b923;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);}
+footer, .list-group-item {background: #1a120b;color: #d4c7a0;border-top: 1px solid #e8b923;}
+.custom-cursor {cursor: url('https://i.imgur.com/7z0Y8.png'), auto;}
+.fa-solid.fa-person-walking.fa-2xl {color: #e8b923;filter: drop-shadow(0 0 5px rgba(232, 185, 35, 0.6));}
+.fa-solid.fa-person-walking.fa-2xl:hover {color: #ff3d3d;transform: scale(1.2);}
+.sm-t.case img.profile-pic2 {border: 2px solid #4a3723;border-radius: 50%;transition: all 0.3s ease;}
+.sm-t.case img.profile-pic2:hover {border-color: #e8b923;box-shadow: 0 0 10px rgba(232, 185, 35, 0.8);}
+.sm-t.case.dead {background: #3c1a1a;} /*rouge*/
+.sm-t.case.attention {background: #4a2e0b;} /*jaune*/
+.sm-t.case.pooled, .pooled {background-color: rgba(204, 85, 0, 0.5) !important;}/* Orange ambre, gemme mystique */
+.sm-t.case.friend, .friend {background-color:rgba(34, 139, 34, 0.5) !important;}/* Vert forêt, elfique */
+.sm-t.case.close_friend, .close_friend {background-color: rgba(138, 43, 226, 0.5) !important;}/* Violet magique, anneau ou sorcellerie */
+.sm-t.case.me, .me {background-color: rgba(60, 26, 26, 1) !important;}/* Bleu royal, noble */
+.sm-t.case.focus, .focus {background-color: rgba(255, 182, 193, 0.5) !important;}/* Rose pâle, lueur magique */

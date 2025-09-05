@@ -17,11 +17,11 @@ td.small-colors{background:#222;color:#0ff;border:1px solid #f0f;}
 .navbar-brand:hover,.nav-link:hover{color:#f0f !important;text-shadow:0 0 10px #f0f;}
 .sm-t.case img.profile-pic2{border:2px solid #0ff;box-shadow:0 0 15px #0ff;transition:transform 0.3s ease;}
 .sm-t.case img.profile-pic2:hover{transform:scale(1.2);}
-.sm-t.case.dead{border-color:#f00; box-shadow:0 0 10px #f00;}
-.sm-t.case.attention{border-color:#ff0; box-shadow:0 0 10px #ff0;}
-.sm-t.case.pooled{border-color:#0f0; box-shadow:0 0 10px #0f0;}
-.sm-t.case.friend{border-color:#0ff; box-shadow:0 0 10px #0ff;}
-.sm-t.case.close_friend{border-color:#f0f; box-shadow:0 0 10px #f0f;}
-.sm-t.case.me{border-color:#fff; box-shadow:0 0 15px #fff;}
-.sm-t.case.focus{border-color:#ff0; box-shadow:0 0 20px #ff0;}
+.sm-t.case.dead{box-shadow:0 0 10px #f00;}
+.sm-t.case.attention{box-shadow:0 0 10px #ff0;}
+.sm-t.case.pooled{box-shadow:0 0 10px #0f0;}
+.sm-t.case.friend{box-shadow:0 0 10px #0ff;}
+.sm-t.case.close_friend{box-shadow:0 0 10px #f0f;}
+.sm-t.case.me{box-shadow:0 0 15px #fff;}
+.sm-t.case.focus{box-shadow:0 0 20px #ff0;}
 @keyframes glitch{0%{transform:translate(0);}8%{transform:translate(-2px,2px); color:#0ff;}16%{transform:translate(2px,-2px); color:#f0f;}24%{transform:translate(0);}}
